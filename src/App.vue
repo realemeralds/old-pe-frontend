@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>post request text</h1>
+  <p>{{}}</p>
+  <button @click="doSomething">sdakjsahd</button>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
+<script lang="ts">
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data(): object {
+    return {
+      count: 0,
+    };
+  },
+  created(): {
+    fetch("localhost:5000": string): Promise<T>.then((response) => response.json()).then((data) => console.log(data))
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+button {
+  font-weight: bold;
 }
 </style>
